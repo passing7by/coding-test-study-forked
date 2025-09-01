@@ -16,9 +16,6 @@ import java.util.*;
  */
 public class Main {
 	public static void main(String[] args) throws Exception {
-//		int n = 7;
-//		int m = 6;
-		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int n = Integer.parseInt(br.readLine());
 		int m = Integer.parseInt(br.readLine()); // 안씀
