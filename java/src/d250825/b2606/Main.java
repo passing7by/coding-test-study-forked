@@ -48,21 +48,21 @@ public class Main {
 		
 		// ArrayDeque메서드 중 Queue 자료구조의 메서드만 사용하도록 강제하기 위해 Queue로 선언
 		Queue<Integer> queue = new ArrayDeque<Integer>(); // 감염된 pc들 (방문해야 할 pc들)
-		Set<Integer> isVisited = new HashSet<Integer>(); // 이미 방문한 pc들
+		Set<Integer> visited = new HashSet<Integer>(); // 이미 방문한 pc들
 		
 		queue.offer(0); // pc = 1 부터 시작
 		while(!queue.isEmpty()) {
 			int pc = queue.poll();
-			if (isVisited.contains(pc)) continue; // 이미 방문했던 pc면 다시 방문하지 않음
+			if (visited.contains(pc)) continue; // 이미 방문했던 pc면 다시 방문하지 않음
 			
 			for (int i = 0; i < n; i++) {
 				if (arr[pc][i] > 0) queue.offer(i);
 			}
 			
-			isVisited.add(pc);
+			visited.add(pc);
 		}
 		
-		System.out.println(isVisited.size() - 1); // 방문했던 pc의 갯수를 출력 (pc = 1 은 제외)
+		System.out.println(visited.size() - 1); // 방문했던 pc의 갯수를 출력 (pc = 1 은 제외)
 		
 		// ----------------- try 1
 		
