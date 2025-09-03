@@ -1,4 +1,6 @@
 // 단순 LinkedList
+package d250825.impl.linkedlist;
+
 public class SimpleLinkedList<T> {
 
     // 노드: 값 + 다음 노드 주소
